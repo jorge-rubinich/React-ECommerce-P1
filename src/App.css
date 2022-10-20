@@ -1,0 +1,46 @@
+.App {
+  text-align: center;
+}
+
+.navContainer {
+  display: flex; 
+  flex-direction: row;  
+  border-bottom: solid 2px blue;
+  padding: 5px 0px;
+}
+
+.catContainer {
+  display: flex; 
+  flex-direction: row;
+  gap: 5px;
+  margin-left: 5px;
+  width: 60%;
+}
+
+.catBox {
+  display: flex;
+  flex-direction: column;
+  gap:0px;
+  width: 55px;
+  border: solid 1px;
+  border-radius: 5px;
+}
+
+.catImg {
+  height: 40px;
+}
+
+.catButtonName {
+  margin: 0px;
+  padding: 0px;
+  font-size: 11px;
+}
+
+.userContainer {
+  display: flex; 
+  flex-direction: column;
+  width: 40%;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-right: 10px;
+}
