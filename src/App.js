@@ -1,13 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header';
 import ItemListContainer from './components/ItemListContainer';
+import { useState } from 'react';
 
-function App() {
+const App = () => {  
+  const [catName, setCatName] = useState('Todas');
   return (
     <div className="App">
       <Header/>
-      <ItemListContainer catName="Todas"/>
+      <ItemListContainer categoria={catName}/>
     </div>
   );
 }

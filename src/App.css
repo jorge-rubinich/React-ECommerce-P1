@@ -44,3 +44,41 @@
   align-items: flex-end;
   margin-right: 10px;
 }
+
+.productCard {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  border: solid 1px;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+}
+
+.productImg {
+  width: 180px;
+}
+
+.ProductName {
+  color: blue;
+}
+
+.ProductPrice {
+  background-color: aqua;
+  align-self: end;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.ProductDesc {
+  color: blue;
+  min-height: 60px;
+}
+.productPack {
+  align-self: end;
+}
+.productDiscount {
+  align-self: end;
+}
+
+
