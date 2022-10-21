@@ -1,13 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header';
-import TicketList from './components/TicketList';
+import ItemListContainer from './components/ItemListContainer';
 
 function App() {
   return (
     <div className="App">
       <Header/>
-      <TicketList mensaje="Listado de productos" catName="Todas"/>
+      <ItemListContainer catName="Todas"/>
     </div>
   );
 }
