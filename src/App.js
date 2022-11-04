@@ -1,15 +1,23 @@
-import './App.css';
+import './styles.css';
 import Header from './components/Header';
 import ItemListContainer from './components/ItemListContainer';
-import { useState } from 'react';
+import ItemDetailContainer from './components/ItemDetailContainer';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Cart from './components/Cart/Cart';
 
 const App = () => {  
-  const [catName, setCatName] = useState('Todas');
   return (
-    <div className="App">
-      <Header/>
-      <ItemListContainer categoria={catName}/>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Header/>
+        <Routes>
+          <Route path="/categoria/:catName" element={<ItemListContainer/>}/>
+          <Route path="/" element={<ItemListContainer/>}/>
+          <Route path="/detail/:id" element={<ItemDetailContainer/>}/>
+          <Route path="/cart" element={<Cart/>}/>
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
