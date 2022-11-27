@@ -2,22 +2,14 @@ import React from 'react'
 import ItemDetail from './ItemDetail'
 import { useState, useEffect, } from "react";
 import { useParams } from "react-router-dom";
+import { getProduct } from '../products'; 
 
 const ItemDetailContainer = () => {
     const {id} = useParams();
-    const idProducto = parseInt(id);
     const [item, setItem] = useState(null);
+
     useEffect(() => {
-        setTimeout(() => {
-        fetch("/productos.json")
-            .then(response =>response.json())
-            .then(data => {  
-                const producto = data.find(product => product.codigo ===idProducto);
-                setItem(producto);
-                }
-            )
-            .catch(error => { alert("Error: "+error+""); })
-        },500);
+        getProduct(id).then(res => setItem(res));
     },[]);
 
     return (

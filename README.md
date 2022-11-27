@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+<h1 align="center">Hola Mundo! Soy Yulia 🌛</h1>
+<h2 align="center">Estudiante de la Carrera Desarrollo Full Stack </h2>
+<h3 align="center">Bienvenidos a mi Primer App E-commerce utilizando React Js!</h3>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## :file_folder: Sobre el proyecto:
+🔸Se trata de el Front end de una tienda online de Cosmética llamado "Imperfecta, Cosmética Natural". Para el mismo utilicé componentes de **React** **Js** y **Firebase** como servidor en la nube. <br>
+🔸Dato de color: La cosmética y sus fotografías son hechos por mi. <br>
 
-## Available Scripts
+## :open_file_folder:  Funcionalidades del proyecto:
+🔸Diseño **responsive**. <br>
+🔸Contiene menú de **Navegación**, mediante cual, el usuario puede navegar por los diferentes productos e ir a sus respectivos **detalles**. <br>
+🔸El usuario puede seleccionar productos a comprar y visualizarlos en el carrito de compras.<br>
+🔸Para finalizar la compra de los productos seleccionados, el usuario debe completar un **formulario** con los datos solicitados. <br>
+🔸Una vez finalizada la compra, el número de orden y su detalle serán enviados a la Base de Datos de Firebase y el usuario verá su **código** **de** **compra** reflejado en pantalla. <br>
+🔸Además, mediante una versión dinámica de categorías, el administrador o colaborador de la Base de Datos podrá **añadir** **nuevos** **productos** al ecommerce sin necesidad de modificar el código del mismo.<br>
 
-In the project directory, you can run:
+## :books:  Bibliotecas:
+🔸React Js: Es una biblioteca Javascript de código abierto diseñada para crear interfaces de usuario con el objetivo de facilitar el desarrollo de aplicaciones en una sola página. **https://es.reactjs.org/** <br>
 
-### `npm start`
+🔸Node Js: Es un entorno en tiempo de ejecución multiplataforma, de código abierto, para la capa del servidor basado en el lenguaje de programación JavaScript, asíncrono. **https://nodejs.org/en/** <br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+🔸Node Packager Manager/NPM: Es el sistema de gestión de paquetes por defecto para Node.js, un entorno de ejecución para JavaScript. **https://www.npmjs.com/** <br>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+🔸React Router Dom: Por defecto, React no viene con un mecanismo integrado de navegación. Esto es para mantener sus dependencias al mínimo y dado que no todo proyecto necesita routing, se maneja como una dependencia aparte. **https://reactrouter.com/en/main** <br>
 
-### `npm test`
+🔸Firebase: Es un servicio provisto por Google para satisfacer las distintas necesidades que puede tener una aplicación y su ciclo de desarrollo, dentro de las cuales encontramos: Seguridad y autenticación, Almacenamiento y consulta, Hosting, Monitoreo, Functions y más. **https://firebase.google.com/** <br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🔸Visual Studio Code: Es un editor de código fuente desarrollado por Microsoft para Windows, Linux, macOS y Web. Incluye soporte para la depuración, control integrado de Git, resaltado de sintaxis, finalización inteligente de código, fragmentos y refactorización de código. **https://code.visualstudio.com/** <br>
 
-### `npm run build`
+🔸GitHub: Es una forja para alojar proyectos utilizando el sistema de control de versiones Git. Se utiliza principalmente para la creación de código fuente de programas de ordenador. **https://github.com/**<br>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+🔸Librería Bootstrap: Es una biblioteca multiplataforma o conjunto de herramientas de código abierto para diseño de sitios y aplicaciones web. **https://react-bootstrap.github.io/** <br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+🔸React Icons: Incluya íconos populares en sus proyectos de React fácilmente. **https://react-icons.github.io/react-icons/**<br> 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+🔸Netlify: Es una empresa de informática en la nube remota que ofrece una plataforma de desarrollo que incluye servicios de back-end de creación, implementación y sin servidor para aplicaciones web y sitios web dinámicos. **https://www.netlify.com/**<br> 
 
-### `npm run eject`
+## :octocat: Ver el Proyecto desde un editor de código:
+🔸Clonar el repositorio: git clone **https://github.com/yuliamonti/monti-45060.git** <br>
+🔸Instalar las dependencias: 
+```bash
+  npm install
+```
+🔸Correr el proyecto en el navegador:
+```bash
+  npm start
+```
+## :computer: Link del Proyecto desde Netlify:
+**https://imperfecta-cosmetica-natural.netlify.app/**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## :hatching_chick:  Mas proyectos de mi aprendizaje:
+Carple, Fábrica de Aberturas: Proyecto utilizando HTML5 y CSS **https://yuliamonti.github.io/carple-monti/**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+La Web de Skay: Proyecto utilizando Sass, Gulp, Npm **https://yuliamonti.github.io/laWebDeSkay/**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Gif App: Proyecto utilizando React, Fetch y API **https://yuliamonti.github.io/gif-api/**
 
-## Learn More
+Brok Electrónica, Servicio Técnico Autorizado de Sony y Samsung: Web utilizando Wordpress **https://brokelectronica.com.ar/**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<br>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## :mailbox_with_mail: Contactame:
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+:briefcase: **https://yuliamonti.github.io/yuliamonti/**
 
-### Analyzing the Bundle Size
+:octocat: **https://github.com/yuliamonti**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/yuliamonti) 
 
-### Making a Progressive Web App
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## :heart_decoration: Gracias:
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+🔸Profe Eric Wajnrajch por tu enseñanza, tu paciencia y tu empatía hacia tus alumnos. <br>
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/eric-wajnrajch/) <br>
 
-### Deployment
+🔸Jorge Rubinichs, mi compañero de React, por tu generosidad en todo el curso. <br>
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jorge-rubinich/)<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+## :black_nib: Autores
+[<img src="https://github.com/yuliamonti/yuliamonti/blob/main/imagenes/yuAstronauta-abstract-removebg.png" width=500><br><sub>Yulia Monti</sub>](https://github.com/yuliamonti)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
