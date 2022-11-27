@@ -18,7 +18,6 @@ const UnitCount = (props) => {
         tippyHide();
     }
 
-
     const tippyToogle = () => {setVisible(!visible)};
     const tippyShow = () =>{setVisible(true)};
     const tippyHide = () =>{setVisible(false)};
@@ -39,17 +38,16 @@ const UnitCount = (props) => {
                     
                     </ul>
                 }>
-                    <div className='cantidadTitulo'  onClick={tippyToogle}>
-                
-                        Cantidad: {counter} {counter>1? preP: preS}
+                <div className='cantidadTitulo'  onClick={tippyToogle}>
+                Cantidad: {counter} {counter>1? preP: preS}
+                <div className='arrowContainer'>        
 
-                    <div className='arrowContainer'>
-                        <i className="arrowIcon"/>
-                    </div>
-                    </div>
+                    <i className='arrowIcon '/>
+                </div>
+                </div>
                 </Tippy>
-            
-        </div>
+            </div>
+    
     )
 }
 

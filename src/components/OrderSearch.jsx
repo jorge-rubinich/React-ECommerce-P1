@@ -17,8 +17,8 @@ const OrderSearch = () => {
 
         <form className='searchForm'>
             <div className='searchInputGroup'>
-            <label className="searchOrdenLabel">Consulta tu orden</label>
-            <input className='input' type="text" placeholder='Buscar'
+            <label className="searchOrdenLabel">Ya tienes una orden?</label>
+            <input className='input' type="text" placeholder='Ingresa el id de tu orden'
                  onChange={onChangeHandler} value={orderId}/>
             </div>
             

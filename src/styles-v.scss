@@ -47,10 +47,8 @@ ul {
     .searchInputGroup {
       display: flex;
       flex-direction: column;
-      .searchOrdenLabel {
+      .searchOrdenLabel ¨{
         text-align: start;
-        font-size: 12px;
-      .input {font-size: 12px;}
       }
     }
   }
@@ -176,7 +174,6 @@ ul {
         font-weight: bold;
         color: rgb(28, 28, 29);
         align-self: flex-start;
-        height: 30px;
       }
       .productDesc{
         margin: 0px;
@@ -344,77 +341,76 @@ ul {
   width: 85%;
 }
 
-.tippyDropDown{
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  justify-content: start;
-}
-
-.cantidadTitulo {
-  position: relative; 
-  width: 100%;
-}
-
 .arrowContainer {
   position: absolute;
   right: 10px;
   top: 5px;
+  border: solid 1px red;
+  width: 20px;
+}  
+ 
+.cantidadTitulo {
+  width: 100%;
+  border: solid 1px gray;
 }
 
+
 .arrowIcon {
+  position: absolute;
   border: solid black;
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 3px;
   transform: translateY(45deg);
   -webkit-transform: rotate(45deg);
-  
-
 }
-
-.tippyWrapper {
+.rotado {
+  transform: rotate(-135deg);
+}
+    
+.tippyDropDown{
   display: flex;
   flex-direction: column;
-  gap: 0px;
-  width: 205px;
-  justify-content: flex-start;
-  align-items: flex-start;
-  
-  .tippyOption {
-    font-size: 14px;
-    font-weight: bold;
-    color: gray;
-    background-color: white;
-    border-left: solid 2px white;
-    width:200px;
-    text-align: left;
-    height: 2rem;
-    padding-top: 0.5rem;
+  gap: 5px;
+  justify-content: start;
+
+
+  .tippyWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    width: 205px;
+    justify-content: flex-start;
+    align-items: flex-start;
     
-  }
-
-  .tippyOption:hover {
-    background-color: gray;
-    color: white;
-  }
-  
-  .active {
     
-    border-left: solid 2px lightblue;
-    background-color: rgb(245, 245, 245) ;
+    .tippyOption {
+      font-size: 14px;
+      font-weight: bold;
+      color: gray;
+      background-color: white;
+      border-left: solid 2px white;
+      width:200px;
+      text-align: left;
+      height: 2rem;
+      padding-top: 0.5rem;
+      
+    }
+      
+    .tippyOption:hover {
+      background-color: gray;
+      color: white;
+    }
+
+    .active {
+      border-left: solid 2px lightblue;
+      background-color: rgb(245, 245, 245) ;
+    }
+      
   }
-
-}
-
-.cantidadTitulo {
-  border: solid 2px lightgray;
-  margin: 0.5rem;
-  padding: 0.5rem;
-  width: 100%;
-  align-self: start;
-}
-
+      
+}  
+  
 .disponibleTitulo {
   margin: 10px;
 }
@@ -483,30 +479,20 @@ ul {
 
     }
 
-
   }
 
 }
 
-.totalContainer {
-  color: white;
-  background-color: black;
-  margin: 0px;
-  padding: 10px;
-  text-align: end;
-}
 .btnClearCart {
-    background-color: red;
-    border: solid 1px lightgray;
-    border-radius: 15px;
-    width: 50%;
-    padding: 10px;
-    align-self: center;
-    font-size: 20px;
-    margin-top: 1rem;
-  }
-  
-
+  background-color: rgb(255, 0, 0);
+  border: none;
+  border-radius: 15px;    
+  width: 50%;
+  padding: 10px;
+  align-self: center;
+  font-size: 20px;
+  margin-top: 1rem;
+}
 
 /****************************************/
 /*  Form del carrito                    */
@@ -531,17 +517,6 @@ ul {
   }
 }
 
-.btnEnviar {
-    color: black;
-    background-color: green;
-    border: solid 1px lightgray;
-    border-radius: 15px;
-    width: 50%;
-    padding: 10px;
-    align-self: center;
-    font-size: 20px;
-    margin-top: 1rem;
-}
 
 /****************************************/
 /*  visualizacion de la orden           */

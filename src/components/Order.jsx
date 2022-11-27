@@ -10,14 +10,33 @@ const Order = () => {
 
   const [order, setOrder] = useState(null);
 
+  const estados= [
+    "Orden Recibida",
+    "Orden recibida. Esperando su mail de confirmación",
+    "Orden recibida. Esperando su pago",
+    "Orden en proceso. Tiempo estimado: 2 días",
+    "En camino. Tiempo estimado de entrega 1 día",
+    "Entregado"
+  ];
+
   useEffect(() => {
-      getOrder(orderId).then(res => setOrder(res));
+      getOrder(orderId).then(res => {
+        /* aumento estado para simular el paso del tiempo */
+        res.estado+= 1;
+        setOrder(res);
+      }
+      );
   },[]);
+
+
 
   if (!order) {
     return <h1>Cargando orden...</h1>
   }
 
+
+  console.log(order.estado);
+  console.log(estados[order.estado]);
 
   return (
     <div>
@@ -40,8 +59,9 @@ const Order = () => {
             <p className="orderLabel">Total:</p>
             <p className='orderData'> {order.total}</p>
 
-            <p className="orderLabel">Total:</p>
-            <p className='orderData'> {order.total}</p>
+            <p className="orderLabel">Estado:</p>
+          
+            <p className='orderData'> {order.estado+'- '+estados[order.estado]}</p>
 
         </div>
     </div>

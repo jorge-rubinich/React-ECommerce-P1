@@ -1,20 +1,18 @@
-<h1 align="center">Hola Mundo! Soy Yulia 🌛</h1>
-<h2 align="center">Estudiante de la Carrera Desarrollo Full Stack </h2>
-<h3 align="center">Bienvenidos a mi Primer App E-commerce utilizando React Js!</h3>
+<h1 align="center">dosMasUno  E-Commerce</h1>
+<h3 align="center">Proyecto final para el módulo REACT de la carrera FULL STACK Developer de CoderHouse</h3>
 
-## :file_folder: Sobre el proyecto:
-🔸Se trata de el Front end de una tienda online de Cosmética llamado "Imperfecta, Cosmética Natural". Para el mismo utilicé componentes de **React** **Js** y **Firebase** como servidor en la nube. <br>
-🔸Dato de color: La cosmética y sus fotografías son hechos por mi. <br>
+##  Sobre el proyecto:
+dosMasUno es una imprenta real que quiere iniciar su presencia en la web para recibir pedidos de trabajos. Utilicé sus productos y servicios para desarrollar este FrontEnd para el modulo REACCT de la carrera de FULL STACK Developer.
+Los productos ofrecidos son reales, aunque no los precios. Las fotos son tomadas de sus redes sociales mientras la imprenta genera fotos de mayor calidad.
 
-## :open_file_folder:  Funcionalidades del proyecto:
-🔸Diseño **responsive**. <br>
-🔸Contiene menú de **Navegación**, mediante cual, el usuario puede navegar por los diferentes productos e ir a sus respectivos **detalles**. <br>
-🔸El usuario puede seleccionar productos a comprar y visualizarlos en el carrito de compras.<br>
-🔸Para finalizar la compra de los productos seleccionados, el usuario debe completar un **formulario** con los datos solicitados. <br>
-🔸Una vez finalizada la compra, el número de orden y su detalle serán enviados a la Base de Datos de Firebase y el usuario verá su **código** **de** **compra** reflejado en pantalla. <br>
-🔸Además, mediante una versión dinámica de categorías, el administrador o colaborador de la Base de Datos podrá **añadir** **nuevos** **productos** al ecommerce sin necesidad de modificar el código del mismo.<br>
+##  Funcionalidad del proyecto:
+Despliega en pantalla todos los productos ofrecidos.
+A traves de un menu de navegación, el usuario puede seleccionar ver los productos de una categoría especifica.
+Eligiendo un producto, se puede ver su detalle, seleccionar la cantidad deseada y añadirlo al carrito.
+El precio varía de acuerdo a la cantidad pedida, generandose descuentos a partir de una cantidad definida para cada producto.
+Al cerrar la compra, se guarda la orden de trabajo en la base de datos, mostrandose su id al usuario para que pueda recuperarla en cualquier momento.
 
-## :books:  Bibliotecas:
+##  Bibliotecas:
 🔸React Js: Es una biblioteca Javascript de código abierto diseñada para crear interfaces de usuario con el objetivo de facilitar el desarrollo de aplicaciones en una sola página. **https://es.reactjs.org/** <br>
 
 🔸Node Js: Es un entorno en tiempo de ejecución multiplataforma, de código abierto, para la capa del servidor basado en el lenguaje de programación JavaScript, asíncrono. **https://nodejs.org/en/** <br>
@@ -35,54 +33,34 @@
 
 🔸Netlify: Es una empresa de informática en la nube remota que ofrece una plataforma de desarrollo que incluye servicios de back-end de creación, implementación y sin servidor para aplicaciones web y sitios web dinámicos. **https://www.netlify.com/**<br> 
 
-## :octocat: Ver el Proyecto desde un editor de código:
-🔸Clonar el repositorio: git clone **https://github.com/yuliamonti/monti-45060.git** <br>
-🔸Instalar las dependencias: 
+## Para reproducir el proyecto en su VSC
+🔸 Clone el repositorio: **https://github.com/jorge-rubinich/React-ECommerce-P1.git** <br>
+🔸Instale las dependencias y corra el proyecto: 
 ```bash
+  git clone **https://github.com/jorge-rubinich/React-ECommerce-P1.git
   npm install
-```
-🔸Correr el proyecto en el navegador:
-```bash
   npm start
 ```
-## :computer: Link del Proyecto desde Netlify:
-**https://imperfecta-cosmetica-natural.netlify.app/**
+## Para verlo en  Netlify:
+**https://cute-cassata-0f52a4.netlify.app/**
 
 ---
 
-## :hatching_chick:  Mas proyectos de mi aprendizaje:
-Carple, Fábrica de Aberturas: Proyecto utilizando HTML5 y CSS **https://yuliamonti.github.io/carple-monti/**
 
-La Web de Skay: Proyecto utilizando Sass, Gulp, Npm **https://yuliamonti.github.io/laWebDeSkay/**
-
-Gif App: Proyecto utilizando React, Fetch y API **https://yuliamonti.github.io/gif-api/**
-
-Brok Electrónica, Servicio Técnico Autorizado de Sony y Samsung: Web utilizando Wordpress **https://brokelectronica.com.ar/**
-
-<br>
-
-## :mailbox_with_mail: Contactame:
+## Contactame en:
 
 
 :briefcase: **https://yuliamonti.github.io/yuliamonti/**
 
 :octocat: **https://github.com/yuliamonti**
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/yuliamonti) 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](linkedin.com/in/jorge-rubinich) linkedin.com/in/jorge-rubinich
 
 <br>
 
-## :heart_decoration: Gracias:
+## Acknowledgements
 
+ - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
+ - [Awesome README](https://github.com/matiassingers/awesome-readme)
+ - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
 
-🔸Profe Eric Wajnrajch por tu enseñanza, tu paciencia y tu empatía hacia tus alumnos. <br>
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/eric-wajnrajch/) <br>
-
-🔸Jorge Rubinichs, mi compañero de React, por tu generosidad en todo el curso. <br>
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jorge-rubinich/)<br>
-
-
-## :black_nib: Autores
-[<img src="https://github.com/yuliamonti/yuliamonti/blob/main/imagenes/yuAstronauta-abstract-removebg.png" width=500><br><sub>Yulia Monti</sub>](https://github.com/yuliamonti)
-
----

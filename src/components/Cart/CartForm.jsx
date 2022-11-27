@@ -122,7 +122,7 @@ const CartForm = () => {
                 onChange={handleChange}
             />
 
-            <button disabled ={sendEnabled()}> Enviar</button>
+            <button className="btnEnviar" disabled ={sendEnabled()}> Enviar Pedido</button>
             <ToastContainer />
         </form>
     </div>
