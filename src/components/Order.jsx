@@ -23,6 +23,8 @@ const Order = () => {
       getOrder(orderId).then(res => {
         /* aumento estado para simular el paso del tiempo */
         res.estado+= 1;
+        
+
         setOrder(res);
       }
       );

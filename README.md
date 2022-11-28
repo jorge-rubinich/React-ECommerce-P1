@@ -34,7 +34,7 @@ Al cerrar la compra, se guarda la orden de trabajo en la base de datos, mostrand
 🔸Netlify: Es una empresa de informática en la nube remota que ofrece una plataforma de desarrollo que incluye servicios de back-end de creación, implementación y sin servidor para aplicaciones web y sitios web dinámicos. **https://www.netlify.com/**<br> 
 
 ## Para reproducir el proyecto en su VSC
-🔸 Clone el repositorio: **https://github.com/jorge-rubinich/React-ECommerce-P1.git** <br>
+🔸 Clone el repositorio: https://github.com/jorge-rubinich/React-ECommerce-P1.git <br>
 🔸Instale las dependencias y corra el proyecto: 
 ```bash
   git clone **https://github.com/jorge-rubinich/React-ECommerce-P1.git
@@ -46,21 +46,14 @@ Al cerrar la compra, se guarda la orden de trabajo en la base de datos, mostrand
 
 ---
 
+💻 Librerias y conocimientos involucrados:
+HTML5 CSS3 JavaScript React Firebase Netlify Bootstrap Sketch PHP MySQL 
+
 
 ## Contactame en:
-
-
-:briefcase: **https://yuliamonti.github.io/yuliamonti/**
-
-:octocat: **https://github.com/yuliamonti**
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](linkedin.com/in/jorge-rubinich) linkedin.com/in/jorge-rubinich
 
 <br>
 
-## Acknowledgements
-
- - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
- - [Awesome README](https://github.com/matiassingers/awesome-readme)
- - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
 

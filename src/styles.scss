@@ -64,18 +64,6 @@ ul {
 
   }
 
-
-  /* User container lo saco por ahora. 
-      veo si lo mando al footer */
-
-/*   .userContainer {
-    display: flex; 
-    flex-direction: column;
-    width: 100px;
-    justify-content: flex-end;
-    align-items: flex-end;
-    margin-right: 10px;
-  }   */
 }
 
 .cartWidget{
@@ -391,7 +379,6 @@ ul {
     text-align: left;
     height: 2rem;
     padding-top: 0.5rem;
-    
   }
 
   .tippyOption:hover {
@@ -406,6 +393,17 @@ ul {
   }
 
 }
+
+.counterDetail {
+    width: 50px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
 
 .cantidadTitulo {
   border: solid 2px lightgray;

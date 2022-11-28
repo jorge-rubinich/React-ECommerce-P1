@@ -29,16 +29,6 @@ ul {
   padding: 5px 0px;
   justify-content: space-between;
   align-content: flex-end;
-  /* User container lo saco por ahora. 
-      veo si lo mando al footer */
-  /*   .userContainer {
-      display: flex; 
-      flex-direction: column;
-      width: 100px;
-      justify-content: flex-end;
-      align-items: flex-end;
-      margin-right: 10px;
-    }   */
 }
 .navContainer .navLogo {
   width: 300px;
@@ -373,6 +363,16 @@ ul {
 .tippyWrapper .active {
   border-left: solid 2px lightblue;
   background-color: rgb(245, 245, 245);
+}
+
+.counterDetail {
+  width: 50px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .cantidadTitulo {

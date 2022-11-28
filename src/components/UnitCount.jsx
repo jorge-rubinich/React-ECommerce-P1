@@ -11,7 +11,9 @@ const UnitCount = (props) => {
 
     const {counter, stock, onQtyChange, preS, preP} = props;
     const [visible, setVisible] = useState(false);
-    
+    const [countMas, setCountMas] = useState(counter<6? 6 : counter);
+
+
     const handleClic= (cantidad) =>{
         /* Al cambiar la cantidad, informo a Item detail a traves de función onQtyChange recibido como props */
         onQtyChange(cantidad);
@@ -21,6 +23,21 @@ const UnitCount = (props) => {
     const tippyToogle = () => {setVisible(!visible)};
     const tippyShow = () =>{setVisible(true)};
     const tippyHide = () =>{setVisible(false)};
+
+    const increment = () => {
+        if (countMas<stock) {
+            setCountMas(countMas+1);
+            console.log(countMas);
+        }
+    };
+    
+    const decrement = () => {
+        if (countMas>1) {
+            setCountMas(countMas-1);
+            console.log(countMas);
+        }
+    };
+
 
     return (
         <div className='cantidadContainer'>
@@ -34,8 +51,15 @@ const UnitCount = (props) => {
                     { stock>=3 && <li className={"tippyOption"+(counter===3?" active": "")} onClick={()=>{handleClic(3)}}>3 {preP}</li>}
                     { stock>=4 && <li className={"tippyOption"+(counter===4?" active": "")} onClick={()=>{handleClic(4)}}>4 {preP}</li>}
                     { stock>=5 && <li className={"tippyOption"+(counter===5?" active": "")} onClick={()=>{handleClic(5)}}>5 {preP}</li>}
-                    { stock>5 &&  <li className={"tippyOption"+(counter>5?" active": "")} onClick={()=>{handleClic(6)}}>más de 5 {preP}</li>}
-                    
+                    { stock>5 &&  <li className={"tippyOption"+(counter>5?" active": "")} >
+                    <div className='counterDetail'>
+                        <button onClick={decrement}>-</button>
+                        <div>{countMas}</div>
+                        <button onClick={increment}>+</button>
+                        <button onClick={()=>{handleClic(countMas)}}> Aceptar</button>
+                    </div>
+                        
+                        </li>}
                     </ul>
                 }>
                 <div className='cantidadTitulo'  onClick={tippyToogle}>

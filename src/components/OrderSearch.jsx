@@ -13,8 +13,6 @@ const OrderSearch = () => {
 
   return (
 
-    <div>
-
         <form className='searchForm'>
             <div className='searchInputGroup'>
             <label className="searchOrdenLabel">Ya tienes una orden?</label>
@@ -23,12 +21,10 @@ const OrderSearch = () => {
             </div>
             
              <Link style={{pointerEvents: orderId.length!==0 ? '' : 'none'}} to={"/order/"+orderId}>
-{/*             <Link to={orderId.length!==0? "/ordertrack/"+orderId :""}>
- */}            <img src="/search.png" alt="Buscar Orden" />
+               <img src="/search.png" alt="Buscar Orden" />
             </Link>
        </form>
 
-    </div>
   )
 }
 

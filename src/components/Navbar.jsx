@@ -10,16 +10,10 @@ const Navbar = () => {
     const [logged, setLogged ] = useState(false);
     const [usuario, setUsuario] = useState("Registrese");
     const [cat, setCat] = useState([]);
-    let botText="Login";
-    function clicBoton() {
-        setLogged(!logged);
-        setUsuario(!logged?"Admin":"Registrese");
-    }
-
+    
     useEffect(() => {
         getCategories().then(res => setCat(res));
     },[]);
-
 
     return (
         <>
@@ -34,11 +28,7 @@ const Navbar = () => {
                     <CartWidget/>
                 </div>
                 </Link>
-                {/* login de Usuario */}    
-{/*                 <div className="userContainer">
-                    <div id='usuario'>{usuario}</div>
-                    <Boton botCaption={logged? 'Salir' : 'Ingresar'} action={clicBoton}/>
-                </div> */}
+
             </div>
             
             {/* Categorias */}    
