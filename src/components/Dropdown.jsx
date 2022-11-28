@@ -6,7 +6,6 @@ const Dropdown = (props) => {
     const [display, setDisplay] = useState('none');
 
     function handleClick() {
-        console.log(display)
         display==='none'? setDisplay('block'): setDisplay('none');
     }
 

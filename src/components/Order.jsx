@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect, } from "react";
 import { useParams } from "react-router-dom";
 import { getOrder } from '../products';
+import { collectionProd } from '../services/firebaseConfig';
 import Cart from './Cart/Cart';
 import CartItem from './Cart/CartItem';
 
@@ -23,8 +24,8 @@ const Order = () => {
       getOrder(orderId).then(res => {
         /* aumento estado para simular el paso del tiempo */
         res.estado+= 1;
+        collectionProd.doc(orderId).update({estado: res.estado});
         
-
         setOrder(res);
       }
       );

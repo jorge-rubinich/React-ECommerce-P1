@@ -18,7 +18,7 @@ const CartForm = () => {
 
     const cerrarCompra = (e) => {
         e.preventDefault();
-   
+        console.log('cerrando compra');
         const oOrden={
             buyer: comprador,
             items: cart,
@@ -29,15 +29,11 @@ const CartForm = () => {
         const collectionOrders = collection(db, "orders");
         addDoc(collectionOrders, oOrden)
             .then((docRef) => {
+                console.log("Document written with ID: ", docRef.id);
                 setOrderId(docRef.id);
-                toast.success(`Tu orden fue recibida con id# ${docRef.id}! Hemos enviado un mail de confirmación a tu casilla. Respondelo para confirmar tu pedido.`,
-                {position: "top-right", closeOnClick: true, pauseOnHover: true});
-                deleteCart();
+           
             })
-            .catch((error) => {
-                toast.success(`Se ha producido un error al enviar la orden. Error:} ${error}. Inténtelo nuevamente dentro de unos minutos!`,
-                {position: "top-right", closeOnClick: true, pauseOnHover: true});
-            }); 
+            .catch((error) => alert(`Se ha producido un error al enviar la orden.`)); 
         }
 
     const handleChange = (e) => {
@@ -59,7 +55,7 @@ const CartForm = () => {
                 <p>Una vez confirmado, te contactaremos para contarte los tiempos de proceso de tu pedido.</p>
                 <p>El çódigo de tu orden es: <strong>{orderId}</strong></p>
                 <p>Guardalo para consulta el estado de tu pedido a través del buscador de ordenes.</p>
-                
+                <button className="btnEnviar" onClick={deleteCart}>Volver al inicio</button>
             </div>
         )
     }
@@ -122,8 +118,8 @@ const CartForm = () => {
                 onChange={handleChange}
             />
 
-            <button className="btnEnviar" disabled ={sendEnabled()}> Enviar Pedido</button>
-            <ToastContainer />
+            <button type="submit" className="btnEnviar" disabled ={sendEnabled()}>Enviar Pedido</button>
+
         </form>
     </div>
   )
