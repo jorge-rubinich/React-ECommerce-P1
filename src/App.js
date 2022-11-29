@@ -1,5 +1,6 @@
 import './styles.css';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
@@ -15,14 +16,17 @@ const App = () => {
         {/* CartGlobal esta definido en el contexto cartContext */}
         <CartGlobal>
           <Header/>
-          <Routes>
-            <Route path="/categoria/:catName" element={<ItemListContainer/>}/>
-            <Route path="/" element={<ItemListContainer/>}/>
-            <Route path="/detail/:id" element={<ItemDetailContainer/>}/>
-            <Route path="/cart" element={<Cart/>}/>
-            <Route path="/order/:orderId" element={<Order/>}/>"
-          </Routes>
+          <div className='mainContainer'> 
+            <Routes>
+              <Route path="/categoria/:catName" element={<ItemListContainer/>}/>
+              <Route path="/" element={<ItemListContainer/>}/>
+              <Route path="/detail/:id" element={<ItemDetailContainer/>}/>
+              <Route path="/cart" element={<Cart/>}/>
+              <Route path="/order/:orderId" element={<Order/>}/>"
+            </Routes>
+          </div>
         </CartGlobal>
+        <Footer/>
       </div>
     </BrowserRouter>
   );

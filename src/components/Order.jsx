@@ -1,9 +1,7 @@
 import React from 'react'
 import { useState, useEffect, } from "react";
 import { useParams } from "react-router-dom";
-import { getOrder } from '../products';
-import { collectionProd } from '../services/firebaseConfig';
-import Cart from './Cart/Cart';
+import { getOrder, updateOrder } from '../products';
 import CartItem from './Cart/CartItem';
 
 const Order = () => {
@@ -20,18 +18,18 @@ const Order = () => {
     "Entregado"
   ];
 
+ 
   useEffect(() => {
       getOrder(orderId).then(res => {
         /* aumento estado para simular el paso del tiempo */
-        res.estado+= 1;
-        collectionProd.doc(orderId).update({estado: res.estado});
-        
+        if (res.estado<5) {
+          res.estado++;
+        }
+        updateOrder(orderId, {estado: res.estado});
         setOrder(res);
       }
       );
   },[]);
-
-
 
   if (!order) {
     return <h1>Cargando orden...</h1>

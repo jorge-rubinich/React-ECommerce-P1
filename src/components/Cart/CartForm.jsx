@@ -6,7 +6,6 @@ import {useContext} from 'react';
 import { CartContext } from '../../contexts/CartContext';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { getToPathname } from '@remix-run/router';
 
 const CartForm = () => {
 
@@ -16,7 +15,7 @@ const CartForm = () => {
     const [comprador, setComprador] = useState({nombre:'', email:'', email2:'', telefono:'', cuit:'', sendEnabled: false});
     const [orderId, setOrderId] = useState('');
 
-    const cerrarCompra = (e) => {
+    const cerrarOrden = (e) => {
         e.preventDefault();
         console.log('cerrando compra');
         const oOrden={
@@ -46,23 +45,51 @@ const CartForm = () => {
             !comprador.email.includes('@'))
     }
 
+    const cerrarCompra = () => {
+        emailSend(); 
+        deleteCart();
+    }
+
+    const emailSend = () => {
+
+        const emailBody = `<h1>Gracias por tu compra!</h1>
+              <p>Hemos recibido tu pedido. </p><p>Id de tu orden: ${orderId}</p>
+              <p>Necesitamos que nos confirme tu orden a traves de este link: <a href="https://ecommerce-jorge-rubinich.vercel.app/confirm/${orderId}">Confirmar Orden</a></p>`;
+        window.Email.send({
+            Host: "dtcwin022.ferozo.com",
+            Username: "dosmasuno-noreply@bitbyte.com.ar",
+            Password: "dosMasUno22",
+            To: comprador.email,
+            From: "dosmasuno-noreply@bitbyte.com.ar",
+            Subject: "dosMasUno - Orden de Compra",
+            Body: emailBody,
+        })
+            .then( (message) => {
+                console.log("Email enviado");
+                // alert("mail sent successfully")//
+            })
+            .catch( (error) => {
+                alert("Error al enviar el mail. Error: " + error);
+            });
+    }
+
     if (orderId) {
         return (
             <div className="container">
                 <h1>Gracias por tu pedido.</h1>
 
-                <p>Te hemos enviado un mail de confirmación a tu casilla. Responde el mail para confirmar tu pedido.</p>
+                <p>Te enviaremos un mail de confirmación a tu casilla. Responde el mail para confirmar tu pedido.</p>
                 <p>Una vez confirmado, te contactaremos para contarte los tiempos de proceso de tu pedido.</p>
                 <p>El çódigo de tu orden es: <strong>{orderId}</strong></p>
                 <p>Guardalo para consulta el estado de tu pedido a través del buscador de ordenes.</p>
-                <button className="btnEnviar" onClick={deleteCart}>Volver al inicio</button>
+                <button className="btnEnviar" onClick={cerrarCompra}>Enviar Mail</button>
             </div>
         )
     }
 
   return (
     <div className='formContainer'>
-        <form className="formItems " action="" onSubmit={cerrarCompra}>    
+        <form className="formItems " action="" onSubmit={cerrarOrden}>    
             <label>Empresa o Nombre y apellido
             </label>
             <input 

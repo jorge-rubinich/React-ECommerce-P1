@@ -37,7 +37,7 @@ Al cerrar la compra, se guarda la orden de trabajo en la base de datos, mostrand
 🔸 Clone el repositorio: https://github.com/jorge-rubinich/React-ECommerce-P1.git <br>
 🔸Instale las dependencias y corra el proyecto: 
 ```bash
-  git clone **https://github.com/jorge-rubinich/React-ECommerce-P1.git
+  git clone https://github.com/jorge-rubinich/React-ECommerce-P1.git
   npm install
   npm start
 ```
@@ -47,7 +47,8 @@ Al cerrar la compra, se guarda la orden de trabajo en la base de datos, mostrand
 ---
 
 💻 Librerias y conocimientos involucrados:
-HTML5 CSS3 JavaScript React Firebase Netlify Bootstrap Sketch PHP MySQL 
+
+HTML5 - CSS3 - JavaScript - React - Firebase - Netlify - Bootstrap - Figma - Photoshop - PHP - MySQL 
 
 
 ## Contactame en:

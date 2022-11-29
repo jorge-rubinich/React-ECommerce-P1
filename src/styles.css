@@ -2,6 +2,10 @@
   text-align: center;
   max-width: 900px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: aqua;
+}
+.App .mainContainer {
+  min-height: 300px;
 }
 
 a {
@@ -42,6 +46,9 @@ ul {
   margin: 0 auto;
   text-align: end;
   align-self: flex-end;
+}
+.navContainer .searchForm img {
+  border: solid 1px lightblue;
 }
 .navContainer .searchForm .searchInputGroup {
   display: flex;
@@ -241,6 +248,7 @@ ul {
 .productDetail .productBuy {
   display: flex;
   flex-direction: column;
+  background-color: rgb(245, 245, 245);
   border: solid 1px lightgray;
   border-radius: 15px;
   margin: 1rem;
@@ -363,6 +371,18 @@ ul {
 .tippyWrapper .active {
   border-left: solid 2px lightblue;
   background-color: rgb(245, 245, 245);
+}
+
+.bntTippyAceptar {
+  color: black;
+  background-color: gray;
+  border: solid 1px lightgray;
+  border-radius: 15px;
+  width: 50%;
+  padding: 10px;
+  align-self: center;
+  font-size: 16px;
+  margin-top: 0.5rem;
 }
 
 .counterDetail {
@@ -515,4 +535,34 @@ ul {
   color: black;
   margin: 0.5rem;
   font-size: 12px;
+}
+
+/****************************************/
+/*    footer                             */
+/****************************************/
+.footerContainer {
+  display: flex;
+  flex-direction: row;
+  max-width: 900px;
+  justify-content: flex-end;
+  align-items: end;
+  background-color: rgb(164, 197, 226);
+  padding: 10px;
+  margin: 0px;
+  margin-top: 1rem;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+}
+.footerContainer .footerContent {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+.footerContainer .footerContent .footerAuthor {
+  color: blue;
+  font-size: 14px;
 }/*# sourceMappingURL=styles.css.map */

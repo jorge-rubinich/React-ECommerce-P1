@@ -56,7 +56,7 @@ const UnitCount = (props) => {
                         <button onClick={decrement}>-</button>
                         <div>{countMas}</div>
                         <button onClick={increment}>+</button>
-                        <button onClick={()=>{handleClic(countMas)}}> Aceptar</button>
+                        <button className="btnTippyAceptar" onClick={()=>{handleClic(countMas)}}> Aceptar</button>
                     </div>
                         
                         </li>}

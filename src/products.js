@@ -1,5 +1,5 @@
  
-import { doc, getDocs, getDoc, query, where } from 'firebase/firestore';
+import { doc, getDocs, getDoc, query, where, updateDoc } from 'firebase/firestore';
 import { collectionProd, collectionCat, collectionOrders } from './services/firebaseConfig';
 
 /* Leer DB productos*/
@@ -59,4 +59,19 @@ export const getProducts = async (catName) =>{
     }
   }  
 
+
+  /* actualizar DB orders  */
+  export const updateOrder = async (orderId, dataUpdated) =>{
+     
+    const docRef = doc(collectionOrders,orderId);
+    const res = await updateDoc(docRef, dataUpdated)
+    .then(() => {
+      console.log("Document successfully updated!");
+    })
+    .catch((error) => {
+      // Ha ocurrido un error.
+      alert('Error al actualizar la orden id# '+orderId+'. Error: ' + error);
+
+    });
+  }
   
