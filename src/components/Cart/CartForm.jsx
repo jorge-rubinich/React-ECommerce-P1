@@ -6,6 +6,7 @@ import {useContext} from 'react';
 import { CartContext } from '../../contexts/CartContext';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
 
 const CartForm = () => {
 
@@ -14,10 +15,10 @@ const CartForm = () => {
 
     const [comprador, setComprador] = useState({nombre:'', email:'', email2:'', telefono:'', cuit:'', sendEnabled: false});
     const [orderId, setOrderId] = useState('');
+    const navigate = useNavigate();
 
     const cerrarOrden = (e) => {
         e.preventDefault();
-        console.log('cerrando compra');
         const oOrden={
             buyer: comprador,
             items: cart,
@@ -29,6 +30,7 @@ const CartForm = () => {
         addDoc(collectionOrders, oOrden)
             .then((docRef) => {
                 console.log("Document written with ID: ", docRef.id);
+                emailSend();
                 setOrderId(docRef.id);
            
             })
@@ -43,11 +45,6 @@ const CartForm = () => {
     const sendEnabled = () => {
         return (comprador.nombre.length===0 || comprador.email.lentgh===0 || comprador.email!==comprador.email2 || 
             !comprador.email.includes('@'))
-    }
-
-    const cerrarCompra = () => {
-        emailSend(); 
-        deleteCart();
     }
 
     const emailSend = () => {
@@ -65,7 +62,8 @@ const CartForm = () => {
             Body: emailBody,
         })
             .then( (message) => {
-                console.log("Email enviado");
+                console.log("Envio Email. Resultado:");
+                console.log(message);
                 // alert("mail sent successfully")//
             })
             .catch( (error) => {
@@ -74,18 +72,9 @@ const CartForm = () => {
     }
 
     if (orderId) {
-        return (
-            <div className="container">
-                <h1>Gracias por tu pedido.</h1>
-
-                <p>Te enviaremos un mail de confirmación a tu casilla. Responde el mail para confirmar tu pedido.</p>
-                <p>Una vez confirmado, te contactaremos para contarte los tiempos de proceso de tu pedido.</p>
-                <p>El çódigo de tu orden es: <strong>{orderId}</strong></p>
-                <p>Guardalo para consulta el estado de tu pedido a través del buscador de ordenes.</p>
-                <button className="btnEnviar" onClick={cerrarCompra}>Enviar Mail</button>
-            </div>
-        )
-    }
+        /* Tengo orden... Voy a Checkout*/
+        navigate('/checkOut/'+orderId);
+   }
 
   return (
     <div className='formContainer'>

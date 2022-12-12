@@ -47,18 +47,21 @@ export const getProducts = async (catName) =>{
 
   /* traer una orden de DB orders por orderId */
   export const getOrder = async (orderId) =>{
+    let order={};
     try {
       const docref= doc(collectionOrders, orderId);
       const res = await getDoc(docref);
-      const order = { id:res.id,...res.data()}
-
+      if (!res.exists()) {
+        order = { id: 'NoExiste' };
+      } else {
+        order = { id:res.id,...res.data()};
+      };
       return order
     } catch (error) {
       alert('Error al cargar la orden id# '+orderId+'. Error: ' + error)
 
     }
   }  
-
 
   /* actualizar DB orders  */
   export const updateOrder = async (orderId, dataUpdated) =>{

@@ -3,54 +3,43 @@ import { useState, useEffect, } from "react";
 import { useParams } from "react-router-dom";
 import { getOrder, updateOrder } from '../products';
 import CartItem from './Cart/CartItem';
-import OrderState from './OrderState';
 
 const Order = () => {
   const {orderId} = useParams();
 
   const [order, setOrder] = useState(null);
 
-  const estados= [
-    "Orden Recibida",
-    "Orden recibida. Esperando su mail de confirmación",
-    "Orden Confirmada. Esperando su pago",
-    "Orden en proceso. Tiempo estimado: 2 días",
-    "En camino. Tiempo estimado de entrega 1 día",
-    "Entregado"
-  ];
-
- 
   useEffect(() => {
       getOrder(orderId).then(res => {
-        /* aumento estado para simular el paso del tiempo */
-        if (res.estado<5) {
-          res.estado++; 
-        }
-        updateOrder(orderId, {estado: res.estado});
         setOrder(res);
       }
-      )
-      .catch(err => {
-        console.log(err);
-        });
+      );
   },[]);
+
+  const confirmOrder = () => {
+    updateOrder(orderId, {estado: 2})
+    .then(res => {
+        setOrder({...order, estado: 2});
+    });
+  }
 
   if (!order) {
     return <h1>Cargando orden...</h1>
   }
 
-  if (order.id === 'NoExiste') {
+  if (order.Estado>2) {
     return (
-      <div>
-          <h1>Orden: {orderId}</h1>
-          <h2>Orden no encontrada</h2>
-      </div>
+        <div>
+            <h1>Orden confirmada.</h1>
+            <p>Gracias por confirmar tu compra. En breve nos contactaremos para coordinar tu pago.</p>
+            <p>No pierdas tu código de orden (#{order.id}). Lo necesitarás para revisar su estado.</p>
+        </div>
     )
-  }
+}
 
   return (
     <div>
-        <h1>Orden: {orderId}</h1>
+        <h1>Order: {orderId}</h1>
 
       <div className="cartFormContainer">
         <div className="cartContainer">
@@ -69,19 +58,11 @@ const Order = () => {
             <p className="orderLabel">Total:</p>
             <p className='orderData'> {order.total}</p>
 
-            <p className="orderLabel">Estado:</p>
-          
-            <p className='orderData'> {order.estado+'- '+estados[order.estado]}</p>
+            <button className="btnEnviar" onClick={confirmOrder} >Confirmar Orden</button>
+
 
         </div>
-      </div>
-      <div className="orderStateContainer">
-          {estados.map((estado, index) => (
-            /* No muestro el estado =0 */
-            index>0 &&  <OrderState key={index} state={index} stateLabel={estado} actual={order.estado}/>  
-          ))}
-          
-      </div>
+    </div>
     </div>
   )
 }

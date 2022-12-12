@@ -27,14 +27,12 @@ const UnitCount = (props) => {
     const increment = () => {
         if (countMas<stock) {
             setCountMas(countMas+1);
-            console.log(countMas);
         }
     };
     
     const decrement = () => {
         if (countMas>1) {
             setCountMas(countMas-1);
-            console.log(countMas);
         }
     };
 
